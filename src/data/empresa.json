@@ -1,0 +1,26 @@
+{
+    "nombre": "Jump It GT",
+    "eslogan": "Saltos & Sonrisas",
+    "lema": "¡La diversión comienza aquí!",
+    "descripcion": "Renta de inflables para fiestas infantiles y eventos. Tenemos castillos, toboganes, inflables acuáticos y modelos temáticos para que cada celebración sea inolvidable.",
+    "alquiler": {
+        "horas": [
+            2,
+            3,
+            4
+        ],
+        "transporte": "Transporte incluido en la ciudad y zonas aledañas (pregunta)"
+    },
+    "contacto": {
+        "telefono": "3057-4012",
+        "telefonoCompleto": "+502 3057-4012",
+        "whatsapp": "50230574012",
+        "mensajeWhatsapp": "Hola, quisiera reservar un inflable."
+    },
+    "redes": {
+        "facebookNombre": "JUMPIT GT",
+        "facebookUrl": "https://www.facebook.com/share/19Qkp1qens/",
+        "instagramUsuario": "jumpitgt_oficial",
+        "instagramUrl": "https://www.instagram.com/jumpitgt_oficial"
+    }
+}
