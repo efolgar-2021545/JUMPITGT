@@ -55,6 +55,7 @@ export default function RentalInfoSection() {
                     >
                         <FaWhatsapp size={18} />
                         Consultar precios
+                        
                     </a>
                 </div>
             </div>
