@@ -1,16 +1,61 @@
-# React + Vite
+# Jump It GT 🐵 — Saltos & Sonrisas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Catálogo web de inflables para fiestas infantiles en Guatemala.
+Hecho con React, Vite y Tailwind CSS.
 
-Currently, two official plugins are available:
+## Páginas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Ruta | Descripción |
+|---|---|
+| `/` | Inicio: hero, destacados, alquiler por horas, cómo reservar y contacto |
+| `/catalogo` | Todos los inflables, con filtros por tipo y buscador |
+| `/catalogo/:id` | Detalle de cada inflable, con galería y botón de reserva |
 
-## React Compiler
+## Cómo correrlo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+pnpm install
+pnpm run dev
+```
 
-## Expanding the ESLint configuration
+Se abre en http://localhost:5173
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Otros comandos:
+
+```bash
+pnpm run build     # genera la carpeta dist/ para publicar
+pnpm run preview   # prueba la versión de producción
+```
+
+## Cómo editar el contenido
+
+No hace falta tocar componentes.
+
+- **Teléfono, redes y datos de la empresa:** `src/data/empresa.json`
+- **Inflables (agregar, quitar o editar):** `src/data/inflables.js`
+- **Colores de la marca:** `src/index.css`, dentro de `@theme`
+- **Imágenes:** carpeta `public/image/`
+
+### Agregar un inflable nuevo
+
+1. Guarda su foto en `public/image/inflables/`.
+2. Abre `src/data/inflables.js`, copia un bloque `{ ... }` y cambia sus datos.
+3. Usa un `id` que no se repita.
+
+## Estructura
+
+```
+src/
+├── components/
+│   ├── layout/      Navbar, Footer, WhatsApp, ScrollToHash
+│   ├── sections/    Secciones de la página de inicio
+│   └── inflables/   Tarjeta reutilizable de inflable
+├── data/            empresa.json e inflables.js
+├── hooks/           usePageTitle
+├── pages/           Páginas completas
+└── routes/          AppRouter
+```
+
+## Contacto
+
+WhatsApp: +502 3057-4012 · Instagram: @jumpitgt_oficial · Facebook: JUMPIT GT

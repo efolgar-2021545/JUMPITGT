@@ -5,6 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import InflableCard from "../components/inflables/InflableCard";
 import { inflablesData, categoriasInflables } from "../data/inflables";
 import empresa from "../data/empresa.json";
+import usePageTitle from "../hooks/usePageTitle";
 
 // Quita tildes y pasa a minúsculas para que "tobogan" encuentre "Tobogán"
 const normalizar = (texto) =>
@@ -14,6 +15,7 @@ const normalizar = (texto) =>
         .replace(/[\u0300-\u036f]/g, "");
 
 export default function CatalogoPage() {
+    usePageTitle("Catálogo de inflables");
     // El filtro de tipo vive en la URL: /catalogo?tipo=acuaticos
     const [searchParams, setSearchParams] = useSearchParams();
     const tipoActual = searchParams.get("tipo") || "todos";

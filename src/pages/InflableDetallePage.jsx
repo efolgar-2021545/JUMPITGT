@@ -5,6 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import InflableCard from "../components/inflables/InflableCard";
 import { inflablesData, categoriasInflables, getInflable } from "../data/inflables";
 import empresa from "../data/empresa.json";
+import usePageTitle from "../hooks/usePageTitle";
 
 // Colores de cada círculo de horas (verde, azul, naranja como en el PDF)
 const coloresHoras = ["bg-jump-green", "bg-sky-500", "bg-jump-orange"];
@@ -22,6 +23,8 @@ export default function InflableDetallePage() {
         setFotoActual(0);
         setFotosConError([]);
     }, [id]);
+
+    usePageTitle(item ? item.nombre : "Inflable no encontrado");
 
     // Si el id de la URL no existe, mostramos un aviso
     if (!item) {
